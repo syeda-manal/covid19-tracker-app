@@ -129,7 +129,6 @@ export default function MainGrid() {
           <FormControl>
             <NativeSelect onChange={handleChange}>
               <option value= "global">Global </option>
-
               {allCountryData.map((country, i) => <option key={i} value={i}> {country.title} </option>)}
             </NativeSelect>
           </FormControl>
