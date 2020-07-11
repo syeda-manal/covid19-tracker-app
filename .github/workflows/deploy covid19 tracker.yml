@@ -25,6 +25,10 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12
+    - name: npm test:ci
+      run: npm run test:ci
+      env:
+         CI: ''
         
     - name: install yarn
       uses: borales/actions-yarn@v2.0.0
