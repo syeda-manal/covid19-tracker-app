@@ -30,10 +30,15 @@ jobs:
       uses: borales/actions-yarn@v2.0.0
       with:
        cmd: install
-      env:
-        CI: ""
+ 
+              
     - name: build react app
-      run: yarn build
+      uses: borales/actions-yarn@v2.0.0
+      env:
+       CI: ""
+      with:
+        cmd: build
+        
     - name: install surge
       run: npm install -g surge
     - name: Run surge
